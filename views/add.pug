@@ -1,0 +1,27 @@
+include head 
+body 
+    include navbar 
+    form.w-50.my-2.mx-auto(method="POST" enctype="multipart/form-data")
+        h3.text-center.my-2 Kitob Qo'shish
+        .mb-3
+            label.form-label Kitob nomi
+            input.form-control(type='text' name="name" )
+        .mb-3
+            label.form-label Kitob muallifi
+            input.form-control(type='text' name="aftor" )
+        .mb-3
+            label.form-label Chiqarilgan Sana
+            input.form-control(type='date' name="year")
+        .mb-3
+            label.form-label Kitob Narxi
+            input.form-control(type='number' name="cost")
+        .mb-3
+            label.form-label Chegirma
+            input.form-control(type='number' name="discount")
+        .mb-3
+            label.form-label img
+            input.form-control(type='file' name="img")
+        .mb-3 
+            label.form-label Komment 
+            textarea.form-control(name="comment", cols="30", rows="10") 
+        button.btn.btn-primary(type='submit') Submit

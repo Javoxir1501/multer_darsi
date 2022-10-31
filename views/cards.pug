@@ -1,0 +1,18 @@
+include head 
+body 
+    if(db)
+        .card.my-3(style='width: 50%;')
+                    .card-body
+                        h3.card-title= db.name
+                        h6.card-title= db.aftor
+                        p.discount= db.discount+"%"
+                        ul.list-group.list-group-flush
+                            li.list-group-item= "Chop etilgan yili: "+db.year.toDateString()
+                            li.list-group-item= "Narxi: "+db.cost
+                            li.list-group-item= "Chegirma bilan:"+ ((db.cost/100)*db.discount)
+                            li.list-group-item= db.date.toDateString()
+                            li.list-group-item 
+                                a(href="/delete/" +db.id)
+                                    button.btn.btn-outline-danger Delete
+    
+        

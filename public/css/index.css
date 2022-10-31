@@ -1,0 +1,35 @@
+.containerr {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+}
+
+p.discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    min-width: 30px;
+    background: #000;
+    color: white;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.comment {
+    position: absolute;
+    background: #fff;
+    color: #000;
+    z-index: 100;
+    border: 1px solid rgb(156, 156, 156);
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    right: 0px;
+    border-radius: 10px;
+}

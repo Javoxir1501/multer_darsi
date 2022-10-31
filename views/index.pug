@@ -1,0 +1,24 @@
+include head 
+link(rel="stylesheet", href="./css/index.css")
+body 
+    include navbar 
+    h1.text-center.my-3 Home page
+    .containerr
+        if(data)
+            each db in data     
+                .card.my-3(style='width: 20rem;')
+                    img(src="../
+                    "+db.img, alt="")
+                    .card-body
+                        h3.card-title= db.name
+                        h6.card-title= db.aftor
+                        p.discount= db.discount+"%"
+                        ul.list-group.list-group-flush
+                            li.list-group-item= "Chop etilgan yili: "+db.year.toDateString()
+                            li.list-group-item= "Narxi: "+db.cost
+                            li.list-group-item= "Chegirma bilan:"+ ((db.cost/100)*db.discount)
+                            li.list-group-item= db.date.toDateString()
+                        hr
+                        a(href="/card/"+db.id) 
+                            button.btn.btn-primary.d-block.mx-auto.w-100 Batafsil
+                        
